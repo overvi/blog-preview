@@ -1,0 +1,30 @@
+@use "sass:list";
+
+$colors: hsl(47, 88%, 63%) hsl(0, 0%, 100%) hsl(0, 0%, 50%) hsl(0, 0%, 7%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: list.nth($colors, 1);
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Figtree", sans-serif;
+}
+
+h1 {
+  font-size: 1.3rem;
+}

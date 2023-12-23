@@ -1,0 +1,73 @@
+@use "sass:list";
+@use "config" as c;
+@use "utilities" as util;
+
+.card {
+  background-color: #fff;
+  max-width: 18rem;
+  padding: 1.3rem;
+  border-radius: 18px;
+  border: 1px solid black;
+  @include util.flow-content;
+  box-shadow: 9px 9px 0px -1px rgba(0, 0, 0);
+  transition: box-shadow 800ms ease;
+
+  &:has(.card__heading:hover) {
+    box-shadow: 15px 15px 0px -1px rgba(0, 0, 0);
+  }
+
+  &__heading {
+    &-img {
+      border-radius: 9px;
+    }
+  }
+
+  .learning-badge {
+    display: inline-block;
+    background-color: list.nth(c.$colors, 1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  &__descriptions {
+    color: list.nth(c.$colors, 3);
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  &__heading {
+    transition: color 780ms ease;
+    &:hover {
+      color: list.nth(c.$colors, 1);
+
+      .card {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+
+    img {
+      width: 30px;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+  }
+}

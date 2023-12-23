@@ -1,0 +1,5 @@
+@mixin flow-content($flow: 1rem) {
+  & > * + * {
+    margin-top: $flow;
+  }
+}

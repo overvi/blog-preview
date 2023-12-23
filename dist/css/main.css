@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: hsl(47, 88%, 63%);
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Figtree", sans-serif;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 18rem;
+  padding: 1.3rem;
+  border-radius: 18px;
+  border: 1px solid black;
+  box-shadow: 9px 9px 0px -1px rgb(0, 0, 0);
+  transition: box-shadow 800ms ease;
+}
+.card > * + * {
+  margin-top: 1rem;
+}
+.card:has(.card__heading:hover) {
+  box-shadow: 15px 15px 0px -1px rgb(0, 0, 0);
+}
+.card__heading-img {
+  border-radius: 9px;
+}
+.card .learning-badge {
+  display: inline-block;
+  background-color: hsl(47, 88%, 63%);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.card__date {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.card__descriptions {
+  color: hsl(0, 0%, 50%);
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.card__heading {
+  transition: color 780ms ease;
+}
+.card__heading:hover {
+  color: hsl(47, 88%, 63%);
+}
+.card__heading:hover .card {
+  opacity: 0;
+}
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+.card__author img {
+  width: 30px;
+}
+.card__author p {
+  font-weight: bold;
+  font-size: 0.8rem;
+}/*# sourceMappingURL=main.css.map */
